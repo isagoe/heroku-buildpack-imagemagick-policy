@@ -45,6 +45,7 @@ elif [ -f $MAGICK_DIR/policy.xml -a -n "$MAGICK_POLICY_OVERRIDE" ]; then
   <policy domain="delegate" rights="none" pattern="HTTP" />
   <policy domain="path" rights="none" pattern="@*" />
   <policy domain="cache" name="shared-secret" value="passphrase" stealth="true"/>
+  <policy domain="coder" rights="read | write" pattern="PDF" />
   </policymap>
 EOF
   export MAGICK_CONFIGURE_PATH="$MAGICK_DIR"
@@ -64,6 +65,7 @@ elif [ -n "$MAGICK_POLICY_OVERRIDE" ]; then
   <policy domain="delegate" rights="none" pattern="HTTP" />
   <policy domain="path" rights="none" pattern="@*" />
   <policy domain="cache" name="shared-secret" value="passphrase" stealth="true"/>
+  <policy domain="coder" rights="read | write" pattern="PDF" />
   </policymap>
 EOF
   export MAGICK_CONFIGURE_PATH="$MAGICK_DIR"
